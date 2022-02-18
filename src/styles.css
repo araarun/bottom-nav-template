@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mat-app-background {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow: scroll;
+}
+
+.mat-app-background::-webkit-scrollbar {
+    display: none;
+}
+
+.mat-app-background {
+    background-color: #ffffff;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.darkMode .drawer {
+    background-color: #464646 !important;
+    color: white;
+}
+
+.lightMode .mat-list-single-selected-option, .active_menu {
+    background-color: white !important;
+}
+
+.darkMode .mat-list-single-selected-option {
+    background-color: black !important;
+}
+
+::selection {
+    color: white;
+    background: orangered;
+}

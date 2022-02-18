@@ -1,0 +1,119 @@
+<mat-sidenav-container class="mat-app-background">
+
+    <mat-sidenav #drawer class="drawer" fixedInViewport="true"
+        [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'"
+        [opened]="!(isHandset$ | async)">
+
+        <!-- <mat-toolbar color="primary"> Business</mat-toolbar> -->
+
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px" class="drawer_header">
+            <button mat-mini-fab>
+                <mat-icon>space_dashboard</mat-icon>
+            </button>
+
+            <h2><b>Dashboard</b></h2>
+        </div>
+
+        <div class="balance_card">
+            <mat-toolbar color="accent" class="balance_card">
+                <div fxLayout="row" fxLayoutAlign="space-between center" fxFlex>
+                    <div fxLayout="column">
+                        <span>Balance</span>
+                        <h2>$12.577.00</h2>
+                    </div>
+                    <div fxLayout="column">
+                        <mat-icon>more_horiz</mat-icon>
+                    </div>
+                </div>
+            </mat-toolbar>
+        </div>
+
+        <mat-selection-list [multiple]="false">
+            <mat-list-option routerLink="/user/dashboard" routerLinkActive="active_menu" (click)="closeSideNav()">
+                <mat-icon matListIcon color="accent">home</mat-icon>
+                <a matLine>Dashboard</a>
+            </mat-list-option>
+
+            <mat-list-option routerLink="/user/main" routerLinkActive="active_menu" (click)="closeSideNav()">
+                <mat-icon matListIcon color="accent">person</mat-icon>
+                <a matLine>Customers</a>
+            </mat-list-option>
+
+            <mat-list-option routerLink="/user/privacypolicy" routerLinkActive="active_menu" (click)="closeSideNav()">
+                <mat-icon matListIcon color="accent">group_work</mat-icon>
+                <a matLine>employees</a>
+            </mat-list-option>
+
+            <mat-list-option routerLink="/user/aside" routerLinkActive="active_menu" (click)="closeSideNav()">
+                <mat-icon matListIcon color="accent">business</mat-icon>
+                <a matLine>Branch</a>
+            </mat-list-option>
+
+        </mat-selection-list>
+
+        <div style="padding: 10px;position: absolute;bottom: 60px;width: -webkit-fill-available;">
+            <mat-toolbar class="ads_card">
+                <div fxLayout="column" style="margin-top: -25px;">
+                    <span>Try the AI</span>
+                    <h2>Features</h2>
+                </div>
+            </mat-toolbar>
+        </div>
+
+        <div style="position: fixed; bottom: 0;">
+            <mat-selection-list multiple="false">
+                <mat-list-option routerLink="/guest" (click)="closeSideNav()">
+                    <mat-icon matListIcon color="accent">logout</mat-icon>
+                    <a matLine>Logout</a>
+                </mat-list-option>
+            </mat-selection-list>
+        </div>
+
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <!-- <mat-toolbar color="primary"> -->
+        <div fxLayoutAlign="end center">
+            <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+                *ngIf="isHandset$ | async">
+                <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+            </button>
+
+            <span class="example-spacer"></span>
+
+            <div fxLayoutAlign="center center" fxLayoutGap="5px grid">
+                    <mat-icon color="night">{{lightDarkToggleIcon}}</mat-icon>
+                    <mat-slide-toggle #lightDarkToggle (click)="doToggleLightDark(lightDarkToggle)"
+                    [formControl]="toggleControl">
+                </mat-slide-toggle>
+                <!-- <mat-icon>brightness_5</mat-icon>
+                <mat-slide-toggle [formControl]="toggleControl" class="mr-8">
+                </mat-slide-toggle>
+                <mat-icon>bedtime</mat-icon> -->
+            </div>
+
+            <div>
+                <button mat-icon-button [matMenuTriggerFor]="beforeMenu">
+                    <mat-icon>account_circle</mat-icon>
+                    <mat-menu #beforeMenu="matMenu" xPosition="before">
+                        <button mat-menu-item>
+                            <mat-icon>manage_accounts</mat-icon>Edit Profile
+                        </button>
+                        <button mat-menu-item>
+                            <mat-icon>change_circle</mat-icon>Change Password
+                        </button>
+                        <button mat-menu-item routerLink="/guest/login">
+                            <mat-icon>logout</mat-icon>Logout
+                        </button>
+                    </mat-menu>
+                </button>
+            </div>
+        </div>
+        <!-- </mat-toolbar> -->
+
+        <div class="main">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+
+</mat-sidenav-container>

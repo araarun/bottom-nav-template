@@ -1,0 +1,87 @@
+<div class="login" fxLayout="row wrap" fxLayoutAlign="center center" style="height:100%">
+
+  <!-- <div fxFlex.xs="90%" fxFlex.sm="33%">
+          <mat-card class="mat-elevation-z4 card1">
+            <mat-card-header fxLayoutAlign="center center">
+              <mat-card-title style="color: white; text-align: center;">E Commerce</mat-card-title>
+              <mat-card-subtitle style="color: white; text-align: center;">ARA Softwares</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="../assets/logo white.png" fxHide.xs>
+          </mat-card>
+        </div> -->
+
+  <div fxFlex="50%" fxFlex.xs="90%" fxFlex.sm="70%">
+
+    <mat-card class="mat-elevation-z4 card2">
+
+      <div class="card1" style=" margin-top: -20px;
+                                          margin-left: -20px;
+                                          margin-right: -20px;">
+        <div fxLayout="column" fxFlex="35%" fxLayoutAlign="center end">
+              <img src="../assets/ara.png" style="width: 80px;">
+        </div>
+        <div fxLayout="column" fxFlex="90%" fxLayoutAlign="center start">
+              <div>
+                <h1 style="margin: 0 0 1px;">Angular Template</h1>
+              </div>
+              <div>
+                ARA Softwares
+              </div>
+        </div>
+      </div><br>
+
+      <mat-card-title style="text-align: center;">
+        L <button mat-mini-fab disabled>
+          <div>
+            <mat-icon style="color: white;">shopping_cart</mat-icon>
+          </div>
+        </button>
+        GIN</mat-card-title>
+      <br>
+
+      <form class="example-form" fxLayout="row wrap" fxLayoutAlign="space-between center">
+        <div fxLayoutAlign="space-between center" fxFlex="100%">
+        <mat-form-field class="example-full-width">
+          <span matPrefix>
+            <mat-icon>account_circle</mat-icon>
+          </span>
+          <mat-label>&emsp;Username</mat-label>
+          <input matInput placeholder="Key in your Username here" value="">
+        </mat-form-field>
+      </div>
+
+      <div fxLayoutAlign="space-between center" fxFlex="100%">
+        <mat-form-field class="example-full-width">
+          <span matPrefix>
+            <mat-icon>enhanced_encryption</mat-icon>
+          </span>
+          <mat-label>&emsp;Password</mat-label>
+          <input matInput placeholder="Key in your Password here" value="">
+        </mat-form-field>
+      </div>
+      </form>
+      <br>
+      <div fxLayout="row" fxLayoutAlign="center center">
+        <button mat-raised-button color="basic" routerLink="/user">
+          <mat-icon>login</mat-icon>&nbsp;
+          Log In
+        </button>
+      </div>
+      <br>
+
+      <div fxLayout="row wrap" fxLayoutAlign="space-between center">
+        <button mat-button routerLink="../forgetpwd">
+          <mat-icon>help</mat-icon>
+          Forget Password
+        </button>
+
+        <button mat-button routerLink="../newuser">
+          <mat-icon>assignment_ind</mat-icon>
+          New User
+        </button>
+      </div>
+      <br>
+    </mat-card>
+  </div>
+
+</div>

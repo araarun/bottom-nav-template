@@ -1,0 +1,82 @@
+.card_bg_img {
+    position: fixed;
+    width: 100%;
+    height: 22vh;
+    top: 0;
+    margin: -17px;
+    /* background-image: linear-gradient(to left, rgba(245, 246, 252, 0.52), rgb(187 124 29)70%), url(/assets/card_bg.jpg); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.status_content {
+    position: relative;
+    /* color: white; */
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+span {
+    font-size: 10px;
+}
+
+.first_card {
+    background-image: url('https://media.istockphoto.com/illustrations/abstract-red-vector-background-with-stripes-illustration-id945945004?k=20&m=945945004&s=612x612&w=0&h=0F5nEANDift4w2IDsyftTilawakxSRBLYY-D4xZ_caA=');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 20px 30px #00000040;
+}
+
+.second_card {
+    background-image: url('https://landleventstampa.files.wordpress.com/2014/06/gold-background-wallpaper-94.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: black;
+    border-radius: 15px;
+    box-shadow: 0 20px 30px #00000040;
+}
+
+.third_card {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQS0KKsEGWnKlT-_AqYv0wPLpZi6fFWY75zHA&usqp=CAU');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 20px 30px #00000040;
+}
+
+.action_card {
+    width: 8vh;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #0000001f;
+}
+
+.action_icon {
+    font-size: 40px;
+    width: 50px;
+    height: 50px;
+}
+
+.ads_card {
+    width: 10vh;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #0000001f;
+}
+
+.ads_icon {
+    color: white;
+}
+
+.banner_card {
+    border-radius: 20px;
+    box-shadow: 0 0 10px #0000001f;
+    background-image: url('https://media.graphcms.com/output=format:webp/S6eLSM3QxSIo3rmhkWMF');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}

@@ -1,0 +1,62 @@
+
+<mat-drawer-container
+    [class.drawer-opened]="drawer.opened"
+    class="example-container">
+    
+    <mat-drawer #drawer 
+    class="drawer" 
+    mode="side" 
+    opened="false">
+
+        <mat-toolbar class="header">
+            <div>Logo</div>
+            <mat-icon class="close"
+        (click)="drawer.close()">close</mat-icon>
+        </mat-toolbar>
+        <div class="contents">
+            <mat-selection-list [multiple]="false">
+                <mat-list-option routerLink = "/user/main">Main</mat-list-option>
+                <mat-list-option routerLink = "/user/privacypolicy">Privacy Policy</mat-list-option>
+                <mat-list-option routerLink = "/user/dashboard">Dashboard</mat-list-option>
+                <mat-list-option routerLink = "/guest/login">Goto Login</mat-list-option>
+            </mat-selection-list>
+        </div>
+
+    </mat-drawer>
+
+    <mat-toolbar class="main header">
+        <mat-icon
+            *ngIf="!drawer.opened"
+            (click)="drawer.toggle()">
+            menu
+        </mat-icon>
+        <app-header></app-header>
+        <div fxFlex="row" fxLayoutAlign="center center">Header</div>
+
+        <div fxLayout="row" fxLayoutGap="10px grid" fxLayoutAlign="center center">
+            <button mat-icon-button [matMenuTriggerFor]="beforeMenu">
+                <mat-icon>account_circle</mat-icon>
+                <mat-menu #beforeMenu="matMenu" xPosition="before">
+                  <button mat-menu-item>
+                    <mat-icon>manage_accounts</mat-icon>Edit Profile
+                  </button>
+                  <button mat-menu-item>
+                    <mat-icon>change_circle</mat-icon>Change Password
+                  </button>
+                  <button mat-menu-item routerLink = "/guest/login">
+                    <mat-icon>logout</mat-icon>Logout
+                  </button>
+                </mat-menu>
+              </button>
+        </div>
+    </mat-toolbar>
+
+    <div class="main contents">
+        <router-outlet></router-outlet>
+    </div>
+
+    <mat-toolbar class="main footer">
+        <div fxFlex="row" fxLayoutAlign="center center">Footer</div>
+    </mat-toolbar>
+
+</mat-drawer-container>
