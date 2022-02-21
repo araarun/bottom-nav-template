@@ -33,6 +33,11 @@
         <app-header></app-header>
         <div fxFlex="row" fxLayoutAlign="center center">Header</div>
 
+        <mat-icon class="mr-8">brightness_5</mat-icon>
+        <mat-slide-toggle [formControl]="toggleControl" class="mr-8">
+        </mat-slide-toggle>
+        <mat-icon>bedtime</mat-icon>
+
         <div fxLayout="row" fxLayoutGap="10px grid" fxLayoutAlign="center center">
             <button mat-icon-button [matMenuTriggerFor]="beforeMenu">
                 <mat-icon>account_circle</mat-icon>

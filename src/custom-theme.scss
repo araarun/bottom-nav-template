@@ -11,23 +11,23 @@
 @include mat.core();
 
 @mixin body-theme($theme) {
-    body {
-      background-color: $app-background-color;
-    }
+  body {
+    background-color: $app-background-color;
   }
+}
 
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$aratemplate-primary: mat.define-palette(mat.$indigo-palette);
-$aratemplate-accent: mat.define-palette(mat.$deep-orange-palette, 500);
+$aratemplate-primary: mat.define-palette(mat.$indigo-palette, 900);
+$aratemplate-accent: mat.define-palette($mat-deep-orange, 700);
 // The warn palette is optional (defaults to red).
 $aratemplate-warn: mat.define-palette(mat.$red-palette);
 // Create the theme object (a Sass map containing all of the palettes).
 $aratemplate-theme: mat.define-light-theme($aratemplate-primary, $aratemplate-accent, $aratemplate-warn);
 
-$aratemplate-dark-primary: mat-palette($mat-amber, A200, A100, A400);
-$aratemplate-dark-accent:  mat-palette($mat-blue-grey, 500);
+$aratemplate-dark-primary: mat-palette($mat-blue-grey);
+$aratemplate-dark-accent:  mat-palette($mat-amber, A200, A100, A400);
 $aratemplate-dark-warn:    mat-palette($mat-red-palette, 500);
 $aratemplate-dark-theme: mat.define-dark-theme($aratemplate-dark-primary, $aratemplate-dark-accent, $aratemplate-dark-warn);
 
@@ -42,9 +42,6 @@ $custom-typography: mat-typography-config(
 
 @include mat-core($custom-typography);
 
-.lightMode {
-  @include mat.all-component-themes($aratemplate-theme);
-}
 .darkMode {
     @include mat.all-component-themes($aratemplate-dark-theme);
   }

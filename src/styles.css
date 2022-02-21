@@ -15,28 +15,9 @@ body {
     position: fixed;
     overflow: scroll;
 }
-
 .mat-app-background::-webkit-scrollbar {
     display: none;
-}
-
-.mat-app-background {
-    background-color: #ffffff;
-    color: rgba(0, 0, 0, 0.87);
-}
-
-.darkMode .drawer {
-    background-color: #464646 !important;
-    color: white;
-}
-
-.lightMode .mat-list-single-selected-option, .active_menu {
-    background-color: white !important;
-}
-
-.darkMode .mat-list-single-selected-option {
-    background-color: black !important;
-}
+  }
 
 ::selection {
     color: white;

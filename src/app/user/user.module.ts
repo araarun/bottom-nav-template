@@ -26,16 +26,17 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule  } from "@angular/forms";
 import {MatCardModule} from '@angular/material/card';
-import {MatDialogModule} from '@angular/material/dialog';
+import {MatTableModule} from '@angular/material/table';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [UserHomeComponent, DashboardComponent, HeaderComponent, NavComponent, MainComponent,
     AsideComponent, FooterComponent, PrivacyPolicyComponent,
     HeaderWithMenuComponent, HeaderWithoutMenuComponent],
   imports: [
-    CommonModule,MatSlideToggleModule,MatFormFieldModule,FormsModule, ReactiveFormsModule,
-    UserRoutingModule,MatCardModule,MatDialogModule,
-    MatToolbarModule,
+    CommonModule,MatSlideToggleModule,FormsModule, ReactiveFormsModule,
+    UserRoutingModule,MatFormFieldModule,MatCardModule,MatTableModule,
+    MatToolbarModule,MatInputModule,
     MatIconModule,
     MatDividerModule,
     MatListModule,

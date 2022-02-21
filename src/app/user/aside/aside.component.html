@@ -1,5 +1,98 @@
-<h1>Branch</h1>
-<br>
-<aside>
-    <h3>Sidebar</h3>
-</aside>
+<div class="msg_feeds" fxLayoutGap="5px grid" >
+    <div fxLayoutGap="10px grid" *ngFor="let i of [1,2,3,4,5,6,7,8,9,10]">
+        <div fxLayout="row" fxLayoutAlign="start center">
+            <div fxFlex="90%">
+                <mat-card class="from_msg">
+                    <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="10px">
+                        <div fxLayout="column">
+                            <div mat-card-avatar class="example-header-image"></div>
+                        </div>
+                        <div fxLayout="column">
+                            <div fxLayout="row" fxLayoutAlign="" fxLayoutGap="10px grid">
+                                <strong>Alvin Joseph</strong>
+                                <span>2/10/2022 3:27 PM</span>
+                            </div>
+                            <div>
+                                <span>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used
+                                    to demonstrate the visual form of a document or a typeface without relying on
+                                    meaningful content.</span>
+                            </div>
+                        </div>
+                    </div>
+                </mat-card>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="end center">
+            <div fxLayoutAlign="end" fxFlex="90%">
+                <mat-card class="to_msg">
+                    <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="10px">
+                        <div fxLayout="column">
+                            <div fxLayout="row" fxLayoutGap="10px grid">
+                                <span>2/10/2022 3:27 PM</span>
+                            </div>
+                            <div>
+                                <span>Lorem ipsum may be used as a placeholder before the final copy
+                                    is available.</span>
+                            </div>
+                        </div>
+                    </div>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="msg_type">
+    <mat-card class="msg_type_card">
+        <div fxLayoutAlign="start start" fxLayoutGap="10px">
+            <button mat-icon-button color="primary">
+                <mat-icon>attach_file</mat-icon>
+            </button>
+
+            <button mat-icon-button color="primary">
+                <mat-icon>insert_link</mat-icon>
+            </button>
+
+            <button mat-icon-button color="primary">
+                <mat-icon>attach_email</mat-icon>
+            </button>
+
+            <button mat-icon-button color="primary">
+                <mat-icon>sentiment_satisfied</mat-icon>
+            </button>
+
+            <button mat-icon-button color="primary">
+                <mat-icon>gif_box</mat-icon>
+            </button>
+
+            <button mat-icon-button color="primary">
+                <mat-icon>more_horiz</mat-icon>
+            </button>
+
+            <button mat-icon-button color="primary">
+                <mat-icon>format_bold</mat-icon>
+            </button>
+
+            <button mat-icon-button color="primary">
+                <mat-icon>format_italic</mat-icon>
+            </button>
+
+            <button mat-icon-button color="primary">
+                <mat-icon>format_underlined</mat-icon>
+            </button>
+        </div>
+
+        <div>
+            <mat-form-field appearance="fill" fxFlex="100%">
+                <!-- <mat-label>Type a new message</mat-label> -->
+                <textarea matInput placeholder="Type a new message" cdkTextareaAutosize
+                cdkAutosizeMinRows="1"
+                cdkAutosizeMaxRows="1"></textarea>
+                <button mat-mini-fab matSuffix>
+                    <mat-icon>send</mat-icon>
+                </button>
+                <!-- <mat-hint>Hint</mat-hint> -->
+            </mat-form-field>
+        </div>
+    </mat-card>
+</div>

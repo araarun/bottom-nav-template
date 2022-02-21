@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-aside',
@@ -6,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./aside.component.css']
 })
 export class AsideComponent {
-
+  fontStyleControl = new FormControl();
+  fontStyle?: string;
   constructor() { }
 
 }

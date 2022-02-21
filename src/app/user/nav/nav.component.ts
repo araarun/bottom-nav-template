@@ -1,13 +1,7 @@
-import { Component, ViewChild, ElementRef, HostBinding, EventEmitter, Output } from '@angular/core';
-import {
-  BreakpointObserver,
-  Breakpoints,
-  BreakpointState,
-} from '@angular/cdk/layout';
-import { FormControl } from '@angular/forms';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { BreakpointObserver } from '@angular/cdk/layout';
 import { OverlayContainer } from '@angular/cdk/overlay';
+import { Component, ViewChild, ElementRef, HostBinding, EventEmitter, Output } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { MatSlideToggle } from '@angular/material/slide-toggle';
 
 @Component({
@@ -18,11 +12,6 @@ import { MatSlideToggle } from '@angular/material/slide-toggle';
 
 export class NavComponent {
   panelOpenState = false;
-  @ViewChild('drawer') drawer: any;
-  public selectedItem: string = '';
-  public isHandset$: Observable<boolean> = this.breakpointObserver
-    .observe(Breakpoints.Handset)
-    .pipe(map((result: BreakpointState) => result.matches));
   toggleControl = new FormControl(false);
 
   nav_position: string = 'end';
@@ -46,12 +35,6 @@ export class NavComponent {
         this.overlay.getContainerElement().classList.remove(darkClassName);
       }
     });
-  }
-
-  closeSideNav() {
-    if (this.drawer._mode == 'over') {
-      this.drawer.close();
-    }
   }
 
   public doToggleLightDark(toggle: MatSlideToggle) {

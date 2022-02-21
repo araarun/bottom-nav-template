@@ -13,6 +13,7 @@ const routes: Routes = [
         { path: 'main', component: MainComponent },
         { path: 'privacypolicy', component: PrivacyPolicyComponent },
         { path: 'dashboard', component: DashboardComponent },
+        { path: 'nav', component: NavComponent },
         { path: 'aside', component: AsideComponent }
       ]
     }
